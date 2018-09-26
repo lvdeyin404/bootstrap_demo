@@ -1,0 +1,701 @@
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+html,
+body {
+	height: 100%;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body{
+	position: relative;
+}
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Image replacement
+ */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    /* IE 6/7 fallback */
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+
+section {
+    background-color: #ffffff;
+    padding: 80px 0;
+    margin: 0;
+}
+
+
+header{
+	background: rgba(0,0,0,0.5);
+	font-size: 18px;
+	color: #fff;
+	padding: 10px;
+}
+
+.logo{
+	float: left;
+	margin: 5px 10px 0 0;
+	transition: all 0.3s ease-in-out;
+}
+
+.site-name{
+	font-size: 32px;
+	transition: all 0.3s ease-in-out;
+}
+
+.site-text{
+	font-size: 13px;
+}
+
+.site-text a:hover{
+	text-decoration: none;
+}
+
+header .col-md-8{
+	transition: all 0.3s ease-in-out;
+	margin-top: 10px;
+}
+
+.navbar-default {
+    background-color: transparent;
+    border: none;
+}
+
+.navbar-default .navbar-nav>li>a {
+    color: #fff;
+    font-size: 18px;
+}
+
+.navbar-default .navbar-nav>li.active>a:hover, .navbar-default .navbar-nav>li>a:hover {
+    color: #55ACEE;
+}
+
+.navbar-default .navbar-nav>li.active>a {
+    background-color: transparent;
+    color: #55ACEE;
+}
+
+.navbar-default .navbar-nav>.active>a:hover {
+    background-color: transparent;
+}
+
+.fiexed-header header{
+	height: 75px;
+	
+}
+
+.fiexed-header .logo{
+	transform: scale(0.8);
+	margin-right: 10px;
+	margin-top: -3px;
+}
+
+.fiexed-header .site-name{
+	font-size: 22px;
+}
+
+.fiexed-header header .col-md-8{
+	font-size: 15px;
+	margin-top: 0;
+}
+
+
+
+/*首页==================================================================*/
+.index{
+	height: 100%;
+}
+
+
+/*使页面有灰蒙蒙的感觉,使用绝对定位作用整块区域*/
+.index::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0,0,0,0.5);
+	content: '';
+}
+
+.index .caption{
+	z-index: 1;
+	position: absolute;
+	top: 30%;
+	width: 100%;
+}
+
+.index h3{
+	color: #FFFFFF;
+}
+
+.index h1{
+	color: #55ACEE;
+	font-size: 50px;
+	font-weight: 900;
+}
+
+.index p{
+	margin-top: 20px;
+	color: #FFFFFF;
+	font-size: 20px;
+}
+/*首页结束=================================================================*/
+
+/*关于页面===================================================================*/
+.speace{
+	padding: 10px 0;
+}
+
+.about .panel-group{
+	margin-top: 55px;
+}
+
+
+.about .panel-heading{
+	margin: 0;
+	padding: 0;
+}
+
+.about .panel-default a{
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+	color: #fff;
+	background-color: #55ACEE;
+	position: relative;
+	padding: 10px 10px;
+	text-decoration: none;
+}
+
+.about .panel-default a::after{
+	font-family: "fontawesome";
+	content: "\f146";
+	position: absolute;
+	right: 30px;
+}
+
+.about .panel-default a:hover{
+	background-color: #55ACEE;
+}
+
+.about .panel-default .collapsed{
+	background-color: #333333;
+}
+
+.about .panel-default .collapsed::after{
+	content: "\f0fe";
+}
+
+.animated-no{
+	opacity: 0;
+}
+
+.animated-off{
+	opacity: 1;
+}
+/*关于结束===================================================================*/
+
+/*服务开始===================================================================*/
+.service p{
+	font-size: 15px;
+}
+
+.service h4{
+	font-size: 18px;
+}
+
+.service i{
+	transform: scale(0.9);
+	color: #ffffff;
+}
+
+.service{
+	color: #FFFFFF;
+	position: relative;
+	background-image: url(../img/bg-image-1_.jpg);
+}
+
+.service::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
+	content: '';
+	background: rgba(85,172,238,0.8);
+}
+
+.service .container{
+	position: relative;
+	z-index: 1;
+}
+/*服务结束===================================================================*/
+
+/*一起学习=====================================================================*/
+
+.together{
+	padding: 15px 0;
+	background: #55ACEE;
+}
+
+.together h2{
+	color: #fff;
+}
+
+/*一起学习结束===================================================================*/
+
+/*图集===========================================================================*/
+.prifile .row-center li{
+	float: none;
+	display: inline-block;
+}
+
+.prifile{
+	padding-bottom: 300px;
+}
+
+.img-overlay{
+	position: relative;
+}
+
+.img-overlay a{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #55ACEE;
+	opacity: 0.8;
+	transform: scale(0.8);
+	opacity: 0;
+	transition: all 0.3s;
+}
+
+.img-overlay a i{
+	position: absolute;
+	top: 50%;
+	left: 47%;
+	color: #fff;
+}
+
+.img-overlay a span{
+	position: absolute;
+	font-size: 14px;
+	bottom: 10px;
+	text-align: center;
+	width: 100%;
+	color: #fff;
+}
+
+.img-overlay:hover a{
+	opacity: 0.8;
+	cursor: pointer;
+	transform: scale(1);
+}
+
+.modal-header{
+	background: #55ACEE;
+}
+
+.modal-header .close{
+	color: #fff;
+	opacity: 1;
+}
+
+.pri-content{
+	margin-top: 20px;
+}
+/*图集结束=========================================================================*/
+
+/*认证==============================================================================*/
+.authentication{
+	position: relative;
+	background: url(../img/bg-image-2_.jpg) no-repeat center center;
+	background-size: cover;
+	color: #ffffff;
+	padding-bottom: 180px;
+}
+
+.authentication::after{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	content: '';
+	background: rgba(0,0,0,0.7);
+}
+
+.authentication .container{
+	position: relative;
+	z-index: 1;
+}
+
+.authentication .media-left{
+	display: block;
+	float: left;
+}
+
+.authentication blockquote{
+	border-left: none;
+	padding: 0;
+	margin: 0;
+}
+
+.authentication .text-center{
+	font-size: 35px;
+	padding: 20px 0;
+	font-weight: 900;
+}
+
+.ad{
+	padding: 20px 0;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	background: #55ACEE;
+	opacity: 0.7;
+}
+
+/*认证结束===========================================================================*/
+
+.happy{
+	padding: 15px 0;
+	background: #333333;
+	color: #fff;
+}
+
+
+/*联系我们============================================================================*/
+
+.contact{
+	height: 100%;
+	padding-top: 150px;
+}
+
+.contact h1{
+	font-size: 36px;
+}
+
+.contact p{
+	font-size: 20px;
+}
+
+.contact .con-text li{
+	margin-top: 5px;
+	font-size: 15px;
+}
+
+.contact .con-text li i{
+	margin-right: 8px;
+}
+
+.contact .con-text2{
+	margin-top: 20px;
+	font-size: 40px;
+}
+
+.contact .con-text2 li{
+	margin-right: 10px;
+}
+
+.contact .form-group span{
+	line-height: 30px;
+}
